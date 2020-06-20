@@ -105,8 +105,8 @@ class iBrewConsole:
                 self.web.run(self.serverBind,self.serverPort,self.client.dump)
         
         except Exception, e:
-            logging.debug(e)
-            logging.debug(traceback.format_exc())
+            logging.error(e)
+            logging.error(traceback.format_exc())
             self.web.kill()
             logging.info("iBrew: Failed to run Web Interface & REST API on port [" + self.serverBind + ":" + str(self.serverPort) + "]")
             return
