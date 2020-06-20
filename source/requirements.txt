@@ -1,4 +1,4 @@
-tornado>=4.2.1
+tornado==4.2.1
 # use make bonjour or make bonjourwin to install bonjour
 #pybonjour>=1.1.1
 wireless>=0.3.2
