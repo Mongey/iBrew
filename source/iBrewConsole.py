@@ -104,7 +104,7 @@ class iBrewConsole:
                 self.web.events = self.client.events
                 self.web.run(self.serverBind,self.serverPort,self.client.dump)
         
-        except Exception, e:
+        except Exception as e:
             logging.error(e)
             logging.error(traceback.format_exc())
             self.web.kill()
