@@ -1903,14 +1903,14 @@ class SmarterProtocol:
         rc = pid.returncode
 
         if rc != 0:
-            return null
+            return None
 
         pid = subprocess.Popen(["arp", "-n", target], shell=False, stdout=subprocess.PIPE)
         s = pid.communicate()[0]
-        result = re.search(r"(([a-f\d]{1,2}\:){5}[a-f\d]{1,2})", s) 
+        result = re.search(r"(([a-f\d]{1,2}\:){5}[a-f\d]{1,2})", s)
         mac = result.group(0)
 
-        return result.group(0) if result else null
+        return result.group(0) if result else None
 
     def print_devices_found(self,devices,relay):
         for i in range(0,len(devices)):
